@@ -1,0 +1,86 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #013220;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+}
+
+.title {
+  color: #f7f0f0;
+}
+
+.filter-buttons button {
+  margin: 5px;
+  padding: 10px 20px;
+  border: none;
+  background: #0077b6;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.filter-buttons button:hover {
+  background: #023e8a;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.image {
+  width: 300px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  filter: brightness(0.95);
+}
+
+.image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  filter: brightness(1.05);
+}
+
+.lightbox {
+  position: fixed;
+  display: none;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.lightbox img {
+  max-width: 90%;
+  max-height: 80%;
+  border-radius: 10px;
+}
+
+.lightbox .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 30px;
+  color: white;
+  cursor: pointer;
+}
+
+.lightbox .nav button {
+  margin: 20px;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+}

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Image Gallery</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <h1 class="title">My Image Gallery</h1>
+
+  <div class="filter-buttons">
+    <button onclick="filterImages('all')">All</button>
+    <button onclick="filterImages('cricket')">Cricket</button>
+    <button onclick="filterImages('city')">City</button>
+  </div>
+
+  <div class="gallery">
+    <img src="image\c1.jfif" class="image cricket" onclick="openLightbox(this.src)">
+    <img src="image\c2.jfif" class="image cricket" onclick="openLightbox(this.src)">
+    <img src="image\c3.jfif" class="image cricket" onclick="openLightbox(this.src)">
+    <img src="image\c4.jfif" class="image cricket" onclick="openLightbox(this.src)">
+    <img src="image\city1.jfif" class="image city" onclick="openLightbox(this.src)">
+    <img src="image\city2.jfif" class="image city" onclick="openLightbox(this.src)">
+    <img src="image\city3.jfif" class="image city" onclick="openLightbox(this.src)">
+  </div>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <span class="close">&times;</span>
+    <img id="lightbox-img">
+    <div class="nav">
+      <button onclick="prevImage()">&#10094;</button>
+      <button onclick="nextImage()">&#10095;</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
